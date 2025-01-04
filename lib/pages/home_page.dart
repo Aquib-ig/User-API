@@ -47,10 +47,13 @@ class _HomePageState extends State<HomePage> {
                         //     "${user["firstName"]} ${user["lastName"]} ${user["maidenName"]}"),
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      UserPage(userId: user.id!)));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserPage(
+                                userModel: userDetails[index],
+                              ),
+                            ),
+                          );
                         },
                       );
                     },
